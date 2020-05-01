@@ -1,13 +1,12 @@
 ﻿@page
-@model RazorApp.Pages.BookList.CreateModel
-@{
-    ViewData["Title"] = "Create";
-}
+@model RazorApp.Pages.BookList.EditModel
 
-<br />  
-<h2 class="text-info">Create new Book</h2><br />    
+<br />
+<h2 class="text-info">Edit Book</h2>
+<br />
 <div class="container border p-3">
     <form method="post">
+        <input type="hidden" asp-for="Book.Id" />
         <div class="form-group row">
             <div class="col-4">
                 <label asp-for="Book.Name"></label>
@@ -34,7 +33,7 @@
         </div>
         <div class="form-group row">
             <div class="col-3 offset-4">
-                <input type="submit" value="Create" class="btn btn-primary form-control"/>
+                <input type="submit" value="Update" class="btn btn-primary form-control" />
             </div>
             <div class="col-3">
                 <a asp-page="Index" class="btn btn-success form-control">
@@ -44,5 +43,3 @@
         </div>
     </form>
 </div>
-    
-

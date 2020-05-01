@@ -4,7 +4,7 @@
     <br />
     <div class="container row p-0 m-0">
         <div class="col-9">
-            <h2 class="text-info "> Book List</h2>
+            <h2 class="text-info "> Books List</h2>
         </div>
         <div class="col-3">
             <a asp-page="create" class="btn btn-info form-control text-white">Create new Book</a>
@@ -39,8 +39,8 @@
                             @Html.DisplayFor(m => item.ISBN)
                         </th>
                         <th>
-                            <button class="btn btn-danger btn-sm">Danger</button>
-                            <a class="btn btn-success btn-sm text-white">Edit</a>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                            <a asp-page="Edit" asp-route-id="@item.Id"  class="btn btn-success btn-sm text-white">Edit</a>
                         </th>
                     </tr>
                         }
