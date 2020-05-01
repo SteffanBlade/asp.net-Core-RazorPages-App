@@ -7,7 +7,7 @@
             <h2 class="text-info "> Book List</h2>
         </div>
         <div class="col-3">
-            <a class="btn btn-info form-control text-white">Create new Book</a>
+            <a asp-page="create" class="btn btn-info form-control text-white">Create new Book</a>
         </div>
 
         <div class="col-12 border p-3 mt-3">
@@ -18,9 +18,12 @@
                         <tr class="table-secondary">
                             <th>
                                 <label asp-for="Books.FirstOrDefault().Name"></label>
-                            </th> 
+                            </th>
                             <th>
                                 <label asp-for="Books.FirstOrDefault().Author"></label>
+                            </th>
+                            <th>
+                                <label asp-for="Books.FirstOrDefault().ISBN"></label>
                             </th>
                         </tr>
                         @foreach(var item in Model.Books)
@@ -31,6 +34,9 @@
                         </th>
                         <th>
                             @Html.DisplayFor(m => item.Author)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.ISBN)
                         </th>
                         <th>
                             <button class="btn btn-danger btn-sm">Danger</button>
